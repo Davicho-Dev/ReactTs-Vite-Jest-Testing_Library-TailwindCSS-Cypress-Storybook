@@ -5,6 +5,8 @@
 		"build": "react-scripts build",
 		"eject": "react-scripts eject",
 		"prettier:fix": "prettier --write .",
+		"storybook": "start-storybook -p 4000 -s public",
+		"build-storybook": "build-storybook -s public"
 	},
 	"dependencies": {
 		"react": "^17.0.2",
@@ -13,6 +15,14 @@
 		"web-vitals": "^2.1.0"
 	},
 	"devDependencies": {
+		"@storybook/addon-actions": "^6.4.13",
+		"@storybook/addon-essentials": "^6.4.13",
+		"@storybook/addon-links": "^6.4.13",
+		"@storybook/builder-webpack5": "^6.4.13",
+		"@storybook/manager-webpack5": "^6.4.13",
+		"@storybook/node-logger": "^6.4.13",
+		"@storybook/preset-create-react-app": "^4.0.0",
+		"@storybook/react": "^6.4.13",
 		"@types/node": "^17.0.9",
 		"@types/react": "^17.0.38",
 		"@types/react-dom": "^17.0.11",
@@ -22,15 +32,24 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-react": "^7.28.0",
+		"eslint-plugin-storybook": "^0.5.5",
 		"prettier": "2.5.1",
 		"typescript": "^4.5.4",
 		"webpack": "^5.66.0"
 	},
 	"eslintConfig": {
 		"extends": [
-			"react-app",
+			"react-app"
 		],
 		"overrides": [
+			{
+				"files": [
+					"**/*.stories.*"
+				],
+				"rules": {
+					"import/no-anonymous-default-export": "off"
+				}
+			}
 		]
 	},
 	"browserslist": {
