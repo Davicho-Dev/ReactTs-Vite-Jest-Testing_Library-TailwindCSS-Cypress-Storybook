@@ -116,3 +116,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+/.yarn/releases/yarn-berry.js
