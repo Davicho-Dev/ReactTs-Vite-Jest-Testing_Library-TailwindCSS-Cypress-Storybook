@@ -1,20 +1,20 @@
 import { useState } from 'react'
 
-import reactLogo from './assets/react.svg'
+import { ReactLogo, ViteLogo } from '../../assets'
 
 const HomePage = () => {
 	const [count, setCount] = useState(0)
 
 	return (
-		<div className='App'>
-			<div>
+		<section className='App'>
+			<header>
 				<a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-					<img src='/vite.svg' className='logo' alt='Vite logo' />
+					<img src={ViteLogo} className='logo' alt='Vite logo' />
 				</a>
 				<a href='https://reactjs.org' target='_blank' rel='noreferrer'>
-					<img src={reactLogo} className='logo react' alt='React logo' />
+					<img src={ReactLogo} className='logo react' alt='React logo' />
 				</a>
-			</div>
+			</header>
 			<h1>Vite + React</h1>
 			<div className='card'>
 				<button onClick={() => setCount((count) => count + 1)}>
@@ -27,7 +27,7 @@ const HomePage = () => {
 			<p className='read-the-docs'>
 				Click on the Vite and React logos to learn more
 			</p>
-		</div>
+		</section>
 	)
 }
 
